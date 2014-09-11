@@ -1,0 +1,21 @@
+<% @if logged-in %>
+<form action="/add" method="post" class="add-entry">
+  <dl>
+    <dt>Title:</dt>
+    <dd><input type="text" size="30" name="title"/></dd>
+    <dt>Text:</dt>
+    <dd><textarea name="text" rows="5" cols="40"></textarea></dd>
+    <dd><input type="submit" value="Post"/></dd>
+  </dl>
+</form>
+<% @endif %>
+
+<ul class="entries">
+  <% @unless entries %>
+  <li><em>Unbelievable. No entries here so far.</em></li>
+  <% @else %>
+  <% @loop entries %>
+  <li><h2><% @var title %></h2><% @var text %></li>
+  <% @endloop %>
+  <% @endunless %>
+</ul>

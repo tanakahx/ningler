@@ -1,0 +1,21 @@
+<!doctype html>
+
+<title>ningler</title>
+<link type="text/css" href="/static/style.css" rel="stylesheet"/>
+<div class="page">
+  <h1>ningler</h1>
+  <div class="metanav">
+    <% @unless logged-in %>
+    <a href="login">log in</a>
+    <% @else %>
+    <a href="logout">log out</a>
+    <% @endunless %>
+  </div>
+
+  <% @loop messages %>
+  <div class="flash"><% @var message %></div>
+  <% @endloop %>
+
+  <% @var body %>
+
+</div>
