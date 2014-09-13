@@ -26,3 +26,5 @@ and then load it with quickload.
 ``` cl
 (ql:quickload "ningler")
 ```
+
+You can access the site url `http://localhost:5000` with a web browser.
